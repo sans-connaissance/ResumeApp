@@ -23,6 +23,9 @@
 		4177ED382785113F00C08BA8 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED372785113F00C08BA8 /* GlobalHelpers.swift */; };
 		4177ED392785113F00C08BA8 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED372785113F00C08BA8 /* GlobalHelpers.swift */; };
 		4177ED3A2785113F00C08BA8 /* GlobalHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED372785113F00C08BA8 /* GlobalHelpers.swift */; };
+		4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
+		4177ED3D278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
+		4177ED3E278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,7 @@
 		4177ED31278510E500C08BA8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4177ED332785112800C08BA8 /* StandardResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardResumeItem.swift; sourceTree = "<group>"; };
 		4177ED372785113F00C08BA8 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
+		4177ED3B278511C100C08BA8 /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +153,7 @@
 				4177ED31278510E500C08BA8 /* HomeView.swift */,
 				4177ED332785112800C08BA8 /* StandardResumeItem.swift */,
 				4177ED372785113F00C08BA8 /* GlobalHelpers.swift */,
+				4177ED3B278511C100C08BA8 /* ResumeItem.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			files = (
 				4177ED382785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
 				4177ED30278510D500C08BA8 /* HomeVM.swift in Sources */,
+				4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				4177ED32278510E500C08BA8 /* HomeView.swift in Sources */,
 				4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */,
 				4177ED342785112800C08BA8 /* StandardResumeItem.swift in Sources */,
@@ -305,6 +311,7 @@
 				4177ED392785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
 				4177ED352785112800C08BA8 /* StandardResumeItem.swift in Sources */,
 				4177ED042783EC5000C08BA8 /* ResumeAppTests.swift in Sources */,
+				4177ED3D278511C100C08BA8 /* ResumeItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +322,7 @@
 				4177ED362785112800C08BA8 /* StandardResumeItem.swift in Sources */,
 				4177ED0E2783EC5000C08BA8 /* ResumeAppUITests.swift in Sources */,
 				4177ED3A2785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
+				4177ED3E278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				4177ED102783EC5000C08BA8 /* ResumeAppUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
