@@ -18,32 +18,47 @@ struct HomeView: View {
             //main VStack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                    ForEach(vm.allCategories, id: \.self) { category in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .font(.title3)
-                                    .bold()
-                                Spacer()
-                            }
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                //This lazy hstack is optional
-                                LazyHStack{
-                                    ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                                        StandardResumeItem(resumeItem: resumeItem)
-                                            .frame(width: 100, height: 200)
-                                            .padding(.horizontal, 20)
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    CategoryView(categoryTitle: .Education, resumeItem: vm.getResumeItem(forCat: .Education), width: 100, height: 200)
+                    CategoryView(categoryTitle: .Experience, resumeItem: vm.getResumeItem(forCat: .Experience), width: 200, height: 400)
+                    
                 }
             }
         }
         .foregroundColor(.white)
     }
 }
+
+
+struct CategoryView: View {
+    
+    let categoryTitle: Category
+    let resumeItem: [ResumeItem]
+    let width: CGFloat
+    let height: CGFloat
+    
+    var body: some View {
+        HStack {
+            Text(categoryTitle.rawValue)
+                .font(.title3)
+                .bold()
+            Spacer()
+        }
+        ScrollView(.horizontal, showsIndicators: false) {
+            //This lazy hstack is optional
+            LazyHStack{
+                ForEach(resumeItem) { resumeItem in
+                    StandardResumeItem(resumeItem: resumeItem)
+                        .frame(width: width, height: height)
+                        .padding(.horizontal, 25)
+                }
+            }
+        }
+        
+        
+    }
+}
+
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
