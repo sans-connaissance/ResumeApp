@@ -12,4 +12,6 @@ struct ResumeItem: Identifiable {
     var year: Int
     var name: String
     var thumbnail: URL
+    
+    var categories: [String]
 }
