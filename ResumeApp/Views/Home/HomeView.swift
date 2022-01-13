@@ -10,12 +10,10 @@ import SwiftUI
 struct HomeView: View {
     var vm = HomeVM()
     let screen = UIScreen.main.bounds
-
+    
     var body: some View {
         ZStack {
-            Color.black
-                .edgesIgnoringSafeArea(.all)
-
+            
             // main VStack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
@@ -30,29 +28,36 @@ struct HomeView: View {
                                 Text(category)
                                     .font(.title3)
                                     .bold()
+                                    .padding(.leading)
                                 Spacer()
                             }
                             ScrollView(.horizontal, showsIndicators: false) {
                                 // This lazy hstack is optional
-                                LazyHStack {
+                                
+                                
+                                LazyHStack(spacing: -6) {
                                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                                        StandardResumeItem(resumeItem: resumeItem)
-                                            .frame(width: 100, height: 200)
-                                            .padding(.horizontal, 20)
+                                        StandardResumeItemView(resumeItem: resumeItem)
+                                            .modifier(SmallButton())
+                                        
                                     }
                                 }
                             }
+                            .background(LinearGradient.blackOpacityGradient)
                         }
                     }
                 }
             }
         }
-        .foregroundColor(.white)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        Group {
+            HomeView()
+            HomeView()
+                .preferredColorScheme(.dark)
+        }
     }
 }
