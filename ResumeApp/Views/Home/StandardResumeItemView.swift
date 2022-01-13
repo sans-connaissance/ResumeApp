@@ -8,7 +8,7 @@
 import Kingfisher
 import SwiftUI
 
-struct StandardResumeItem: View {
+struct StandardResumeItemView: View {
     var resumeItem: ResumeItem
     
     var body: some View {
@@ -20,6 +20,6 @@ struct StandardResumeItem: View {
 
 struct StandardResumeItem_Previews: PreviewProvider {
     static var previews: some View {
-        StandardResumeItem(resumeItem: exampleResumeItem1)
+        StandardResumeItemView(resumeItem: exampleResumeItem1)
     }
 }
