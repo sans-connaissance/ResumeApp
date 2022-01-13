@@ -22,7 +22,7 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -110)
                     
-                    ForEach(vm.allCategories, id: \.self) { category in
+                    ForEach(vm.smallButton, id: \.self) { category in
                         VStack {
                             HStack {
                                 Text(category)

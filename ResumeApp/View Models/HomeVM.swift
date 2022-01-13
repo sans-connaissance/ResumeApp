@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import AVFoundation
 
 class HomeVM: ObservableObject {
@@ -18,7 +19,10 @@ class HomeVM: ObservableObject {
         resumeItems.keys.map({ String($0) })
     }
     
-    
+    public var smallButton: [String] {
+        Category.smallButtonGroup.map({$0.title})
+
+    }
     
     init() {
         setupResumeItems()
@@ -29,7 +33,8 @@ class HomeVM: ObservableObject {
         resumeItems[cat] ?? []
     }
     
-    
+    // need to setup the resumeitems dict here with their key value pairs
+    //is this were future calls will go to pull from server?
     func setupResumeItems() {
         var educationArray: [ResumeItem] = []
         educationArray.append(exampleResumeItems[0])
@@ -37,13 +42,32 @@ class HomeVM: ObservableObject {
         educationArray.append(exampleResumeItems[2])
         resumeItems["Education"] = educationArray
         resumeItems["Experience"] = exampleResumeItems.shuffled()
+        resumeItems["Projects"] = exampleResumeItems.shuffled()
         
     }
 }
 
 enum Category: String, CaseIterable {
-    case Education
-    case Experience
-    case Projects
+
+    case education
+    case experience
+    case projects
     
+    /// update these in order to update button groups on home page and elsewhere
+    static let smallButtonGroup: [Category] = [.experience, .projects]
+    static let largeButtonGroup: [Category] = [.education]
+    
+    var title: String {
+        switch self {
+            
+        case .education:
+            return "Education"
+        case .experience:
+            return "Experience"
+        case .projects:
+            return "Projects"
+        }
+    }
 }
+
+

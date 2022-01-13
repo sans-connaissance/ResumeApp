@@ -194,7 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				4177ED372785113F00C08BA8 /* GlobalHelpers.swift */,
-				41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,6 +201,7 @@
 		41DAC0ED278FBBA9003CA326 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */,
 				41DAC0EE278FBBC1003CA326 /* Buttons */,
 				4177ED2E278510AB00C08BA8 /* Home */,
 			);
