@@ -126,6 +126,7 @@
 		4177ECF12783EC4E00C08BA8 /* ResumeApp */ = {
 			isa = PBXGroup;
 			children = (
+				41DAC0F32790BB3E003CA326 /* Modifiers */,
 				4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */,
 				4177ECF42783EC4E00C08BA8 /* ContentView.swift */,
 				41DAC0EC278FBB71003CA326 /* Helpers */,
@@ -201,7 +202,6 @@
 		41DAC0ED278FBBA9003CA326 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */,
 				41DAC0EE278FBBC1003CA326 /* Buttons */,
 				4177ED2E278510AB00C08BA8 /* Home */,
 			);
@@ -215,6 +215,14 @@
 				41F601B027891D4E00BE0239 /* WhiteButton.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		41DAC0F32790BB3E003CA326 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */,
+			);
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

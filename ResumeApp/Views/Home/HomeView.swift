@@ -22,31 +22,44 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -110)
                     
-                    ForEach(vm.smallButton, id: \.self) { category in
-                        VStack {
-                            HStack {
-                                Text(category)
-                                    .font(.title3)
-                                    .bold()
-                                    .padding(.leading)
-                                Spacer()
-                            }
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                // This lazy hstack is optional
-                                
-                                
-                                LazyHStack(spacing: -6) {
-                                    ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                                        StandardResumeItemView(resumeItem: resumeItem)
-                                            .modifier(SmallButton())
-                                        
-                                    }
-                                }
-                            }
-                            .background(LinearGradient.blackOpacityGradient)
+                    ResumeItemButtonView(vm: vm, buttonList: vm.smallButton, modifier: SmallButton())
+                }
+            }
+        }
+    }
+}
+
+
+
+struct ResumeItemButtonView<V>: View where V: ViewModifier {
+    
+    var vm: HomeVM
+    var buttonList: [String]
+    var modifier: V
+    
+    var body: some View {
+        ForEach(buttonList, id: \.self) { category in
+            VStack {
+                HStack {
+                    Text(category)
+                        .font(.title3)
+                        .bold()
+                        .padding(.leading)
+                    Spacer()
+                }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    // This lazy hstack is optional
+                    
+                    
+                    LazyHStack(spacing: -6) {
+                        ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
+                            StandardResumeItemView(resumeItem: resumeItem)
+                                .modifier(modifier)
+                            
                         }
                     }
                 }
+                .background(LinearGradient.blackOpacityGradient)
             }
         }
     }

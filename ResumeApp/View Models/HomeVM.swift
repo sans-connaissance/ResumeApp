@@ -24,6 +24,11 @@ class HomeVM: ObservableObject {
 
     }
     
+    public var largeButton: [String] {
+        Category.largeButtonGroup.map({$0.title})
+
+    }
+    
     init() {
         setupResumeItems()
     }
@@ -47,27 +52,6 @@ class HomeVM: ObservableObject {
     }
 }
 
-enum Category: String, CaseIterable {
 
-    case education
-    case experience
-    case projects
-    
-    /// update these in order to update button groups on home page and elsewhere
-    static let smallButtonGroup: [Category] = [.experience, .projects]
-    static let largeButtonGroup: [Category] = [.education]
-    
-    var title: String {
-        switch self {
-            
-        case .education:
-            return "Education"
-        case .experience:
-            return "Experience"
-        case .projects:
-            return "Projects"
-        }
-    }
-}
 
 
