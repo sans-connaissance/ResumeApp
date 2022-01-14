@@ -56,21 +56,33 @@ struct LargeButton: ViewModifier {
 
 enum Category: String, CaseIterable {
 
+    case appStore
+    case dataStructures
+    case demos
     case education
     case experience
+    case iOSTraining
     case projects
-    
+
     /// update these in order to update button groups on home page and elsewhere
-    static let smallButtonGroup: [Category] = [.experience, .projects]
+    static let smallButtonGroup: [Category] = [.demos, .dataStructures, iOSTraining]
+    static let mediumButtonGroup: [Category] = [.appStore, .experience]
     static let largeButtonGroup: [Category] = [.education]
     
     var title: String {
         switch self {
-            
+        case .appStore:
+            return "Available on App Store"
+        case .dataStructures:
+            return "Data Structures"
+        case .demos:
+            return "Demo Apps"
         case .education:
             return "Education"
         case .experience:
             return "Experience"
+        case .iOSTraining:
+            return "iOS Training"
         case .projects:
             return "Projects"
         }
