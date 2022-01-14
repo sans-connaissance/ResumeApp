@@ -19,12 +19,12 @@ class HomeVM: ObservableObject {
         resumeItems.keys.map({ String($0) })
     }
     
-    public var smallButton: [String] {
+    public var smallButtonList: [String] {
         Category.smallButtonGroup.map({$0.title})
 
     }
     
-    public var largeButton: [String] {
+    public var largeButtonList: [String] {
         Category.largeButtonGroup.map({$0.title})
 
     }
