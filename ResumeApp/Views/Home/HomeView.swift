@@ -23,6 +23,8 @@ struct HomeView: View {
                         .padding(.top, -110)
                     
                     ResumeItemButtonView(vm: vm, buttonList: vm.smallButton, modifier: SmallButton())
+                    
+                    ResumeItemButtonView(vm: vm, buttonList: vm.largeButton, modifier: LargeButton())
                 }
             }
         }
@@ -33,6 +35,7 @@ struct HomeView: View {
 
 struct ResumeItemButtonView<V>: View where V: ViewModifier {
     
+    //should the view model be removed?
     var vm: HomeVM
     var buttonList: [String]
     var modifier: V

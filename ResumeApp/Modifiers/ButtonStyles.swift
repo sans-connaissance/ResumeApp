@@ -25,7 +25,7 @@ struct SmallButton: ViewModifier {
 struct LargeButton: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(width: 150, height: 300)
+            .frame(width: 200, height: 300)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
