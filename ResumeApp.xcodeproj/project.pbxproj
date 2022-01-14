@@ -26,7 +26,6 @@
 		4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
 		4177ED3D278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
 		4177ED3E278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
-		41DAC0F0278FBDC2003CA326 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */; };
 		41DAC0F2278FD2FF003CA326 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DAC0F1278FD2FF003CA326 /* GradientView.swift */; };
 		41F601AB27891D2A00BE0239 /* LargeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F601AA27891D2A00BE0239 /* LargeTopView.swift */; };
 		41F601AD27891D4300BE0239 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F601AC27891D4300BE0239 /* SmallVerticalButton.swift */; };
@@ -70,7 +69,6 @@
 		4177ED332785112800C08BA8 /* StandardResumeItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardResumeItemView.swift; sourceTree = "<group>"; };
 		4177ED372785113F00C08BA8 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		4177ED3B278511C100C08BA8 /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
-		41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		41DAC0F1278FD2FF003CA326 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		41F601AA27891D2A00BE0239 /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
 		41F601AC27891D4300BE0239 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 		4177ECF12783EC4E00C08BA8 /* ResumeApp */ = {
 			isa = PBXGroup;
 			children = (
-				41DAC0F32790BB3E003CA326 /* Modifiers */,
 				4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */,
 				4177ECF42783EC4E00C08BA8 /* ContentView.swift */,
 				41DAC0EC278FBB71003CA326 /* Helpers */,
@@ -215,14 +212,6 @@
 				41F601B027891D4E00BE0239 /* WhiteButton.swift */,
 			);
 			path = Buttons;
-			sourceTree = "<group>";
-		};
-		41DAC0F32790BB3E003CA326 /* Modifiers */ = {
-			isa = PBXGroup;
-			children = (
-				41DAC0EF278FBDC2003CA326 /* ButtonStyles.swift */,
-			);
-			path = Modifiers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41DAC0F0278FBDC2003CA326 /* ButtonStyles.swift in Sources */,
 				4177ED382785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
 				41DAC0F2278FD2FF003CA326 /* GradientView.swift in Sources */,
 				4177ED30278510D500C08BA8 /* HomeVM.swift in Sources */,

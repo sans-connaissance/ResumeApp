@@ -22,9 +22,9 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -110)
                     
-                    ResumeItemButtonView(vm: vm, buttonList: vm.smallButton, modifier: SmallButton())
+                    ResumeItemListView(vm: vm, buttonList: vm.smallButtonList, modifier: SmallButton())
                     
-                    ResumeItemButtonView(vm: vm, buttonList: vm.largeButton, modifier: LargeButton())
+                    ResumeItemListView(vm: vm, buttonList: vm.largeButtonList, modifier: LargeButton())
                 }
             }
         }
@@ -33,9 +33,9 @@ struct HomeView: View {
 
 
 
-struct ResumeItemButtonView<V>: View where V: ViewModifier {
+struct ResumeItemListView<V>: View where V: ViewModifier {
     
-    //should the view model be removed?
+    //should the view model be removed? -- no I think I like the possibility to expand use of the VM here
     var vm: HomeVM
     var buttonList: [String]
     var modifier: V
@@ -62,6 +62,7 @@ struct ResumeItemButtonView<V>: View where V: ViewModifier {
                         }
                     }
                 }
+                // Can I add a dependancy here so that the background can be changed?
                 .background(LinearGradient.blackOpacityGradient)
             }
         }
