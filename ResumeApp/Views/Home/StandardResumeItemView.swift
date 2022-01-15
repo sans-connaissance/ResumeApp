@@ -12,9 +12,11 @@ struct StandardResumeItemView: View {
     var resumeItem: ResumeItem
     
     var body: some View {
-        KFImage(resumeItem.thumbnail)
-            .resizable()
-            .scaledToFill()
+        ZStack {
+            KFImage(resumeItem.thumbnail)
+                .resizable()
+                .scaledToFill()
+        }
     }
 }
 

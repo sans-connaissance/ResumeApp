@@ -31,6 +31,7 @@ struct ResumeItemListView<V>: View where V: ViewModifier {
     var vm: HomeVM
     var category: Category
     var modifier: V
+    //can I add a boolean here that will drive optional information like titles and such?
     
     var body: some View {
         VStack {
@@ -45,8 +46,11 @@ struct ResumeItemListView<V>: View where V: ViewModifier {
                 // This lazy hstack is optional
                 LazyHStack(spacing: -6) {
                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
+                        VStack {
                         StandardResumeItemView(resumeItem: resumeItem)
                             .modifier(modifier)
+                        Text(resumeItem.name)
+                        }
                     }
                 }
             }

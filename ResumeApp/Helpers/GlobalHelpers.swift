@@ -64,10 +64,10 @@ enum Category: String, CaseIterable {
     case iOSTraining
     case projects
 
-    /// update these in order to update button groups on home page and elsewhere
-    static let smallButtonGroup: [Category] = [.demos, .dataStructures, iOSTraining]
-    static let mediumButtonGroup: [Category] = [.appStore, .experience]
-    static let largeButtonGroup: [Category] = [.education]
+//    /// update these in order to update button groups on home page and elsewhere
+//    static let smallButtonGroup: [Category] = [.demos, .dataStructures, iOSTraining]
+//    static let mediumButtonGroup: [Category] = [.appStore, .experience]
+//    static let largeButtonGroup: [Category] = [.education]
     
     var title: String {
         switch self {
