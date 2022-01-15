@@ -13,58 +13,45 @@ struct HomeView: View {
     
     var body: some View {
         ZStack {
-            
             // main VStack
             ScrollView(showsIndicators: false) {
                 LazyVStack {
-                    
                     LargeTopView(resumeItem: exampleResumeItem3)
                         .frame(width: screen.width)
                         .padding(.top, -110)
                     
-                    ResumeItemListView(vm: vm, buttonList: vm.smallButtonList, modifier: SmallButton())
-                    
-                    ResumeItemListView(vm: vm, buttonList: vm.largeButtonList, modifier: LargeButton())
+                    ResumeItemListView(vm: vm, category: .appStore, modifier: SmallButton())
                 }
             }
         }
     }
 }
 
-
-
 struct ResumeItemListView<V>: View where V: ViewModifier {
-    
-    //should the view model be removed? -- no I think I like the possibility to expand use of the VM here
     var vm: HomeVM
-    var buttonList: [String]
+    var category: Category
     var modifier: V
     
     var body: some View {
-        ForEach(buttonList, id: \.self) { category in
-            VStack {
-                HStack {
-                    Text(category)
-                        .font(.title3)
-                        .bold()
-                        .padding(.leading)
-                    Spacer()
-                }
-                ScrollView(.horizontal, showsIndicators: false) {
-                    // This lazy hstack is optional
-                    
-                    
-                    LazyHStack(spacing: -6) {
-                        ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                            StandardResumeItemView(resumeItem: resumeItem)
-                                .modifier(modifier)
-                            
-                        }
+        VStack {
+            HStack {
+                Text(category.title)
+                    .font(.title3)
+                    .bold()
+                    .padding(.leading)
+                Spacer()
+            }
+            ScrollView(.horizontal, showsIndicators: false) {
+                // This lazy hstack is optional
+                LazyHStack(spacing: -6) {
+                    ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
+                        StandardResumeItemView(resumeItem: resumeItem)
+                            .modifier(modifier)
                     }
                 }
-                // Can I add a dependancy here so that the background can be changed?
-                .background(LinearGradient.blackOpacityGradient)
             }
+            // Can I add a dependancy here so that the background can be changed?
+            .background(LinearGradient.blackOpacityGradient)
         }
     }
 }
