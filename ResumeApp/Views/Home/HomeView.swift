@@ -21,6 +21,11 @@ struct HomeView: View {
                         .padding(.top, -110)
                     
                     ResumeItemListView(vm: vm, category: .appStore, modifier: SmallButton(), showOverlay: false, showDescription: false)
+                    ResumeItemListView(vm: vm, category: .demos, modifier: SmallButton(), showOverlay: false, showDescription: false)
+                    ResumeItemListView(vm: vm, category: .dataStructures, modifier: SmallButton(), showOverlay: false, showDescription: false)
+                    ResumeItemListView(vm: vm, category: .education, modifier: SmallButton(), showOverlay: false, showDescription: false)
+                    ResumeItemListView(vm: vm, category: .iOSTraining, modifier: SmallButton(), showOverlay: false, showDescription: false)
+                    ResumeItemListView(vm: vm, category: .experience, modifier: SmallButton(), showOverlay: false, showDescription: false)
                 }
             }
         }

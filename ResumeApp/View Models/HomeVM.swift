@@ -31,6 +31,9 @@ class HomeVM: ObservableObject {
         resumeItems[.experience] = exampleResumeItems.shuffled()
         resumeItems[.projects] = exampleResumeItems.shuffled()
         resumeItems[.appStore] = exampleResumeItems.shuffled()
+        resumeItems[.demos] = exampleResumeItems.shuffled()
+        resumeItems[.dataStructures] = exampleResumeItems.shuffled()
+        resumeItems[.iOSTraining] = exampleResumeItems.shuffled()
         
     }
 }
