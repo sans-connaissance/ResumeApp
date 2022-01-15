@@ -20,7 +20,7 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, -110)
                     
-                    ResumeItemListView(vm: vm, category: .appStore, modifier: SmallButton())
+                    ResumeItemListView(vm: vm, category: .appStore, modifier: SmallButton(), showOverlay: false, showDescription: false)
                 }
             }
         }
@@ -31,6 +31,8 @@ struct ResumeItemListView<V>: View where V: ViewModifier {
     var vm: HomeVM
     var category: Category
     var modifier: V
+    var showOverlay: Bool
+    var showDescription: Bool
     //can I add a boolean here that will drive optional information like titles and such?
     
     var body: some View {
@@ -47,9 +49,14 @@ struct ResumeItemListView<V>: View where V: ViewModifier {
                 LazyHStack(spacing: -6) {
                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
                         VStack {
-                        StandardResumeItemView(resumeItem: resumeItem)
-                            .modifier(modifier)
-                        Text(resumeItem.name)
+                            StandardResumeItemView(resumeItem: resumeItem)
+                                .modifier(modifier)
+                            if showDescription {
+                                Text(resumeItem.name)
+                                if let item = resumeItem.shortDescription {
+                                    Text(item)
+                                }
+                            }
                         }
                     }
                 }

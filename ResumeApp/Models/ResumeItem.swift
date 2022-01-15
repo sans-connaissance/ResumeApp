@@ -13,5 +13,18 @@ struct ResumeItem: Identifiable {
     var name: String
     var thumbnail: URL
     
+    var location: String?
+    
+    var companyName: String?
+    var jobTitle: String?
+    
+    var degreeName: String?
+    var schoolName: String?
+    
+    var projectName: String?
+    
+    var shortDescription: String?
+    var LongDescription: String?
+    
     var categories: [String]
 }
