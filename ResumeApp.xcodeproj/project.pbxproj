@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		412251942793413E001DC767 /* ScrollingHStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412251932793413E001DC767 /* ScrollingHStackModifier.swift */; };
+		4122519627947A20001DC767 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122519527947A20001DC767 /* CarouselView.swift */; };
+		4122519727947A20001DC767 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122519527947A20001DC767 /* CarouselView.swift */; };
+		4122519827947A20001DC767 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4122519527947A20001DC767 /* CarouselView.swift */; };
 		4177ECF32783EC4E00C08BA8 /* ResumeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */; };
 		4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ECF42783EC4E00C08BA8 /* ContentView.swift */; };
 		4177ECF72783EC4F00C08BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177ECF62783EC4F00C08BA8 /* Assets.xcassets */; };
@@ -56,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		412251932793413E001DC767 /* ScrollingHStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHStackModifier.swift; sourceTree = "<group>"; };
+		4122519527947A20001DC767 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		4177ECEF2783EC4E00C08BA8 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppApp.swift; sourceTree = "<group>"; };
 		4177ECF42783EC4E00C08BA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				41F601AA27891D2A00BE0239 /* LargeTopView.swift */,
 				4177ED332785112800C08BA8 /* StandardResumeItemView.swift */,
 				41DAC0F1278FD2FF003CA326 /* GradientView.swift */,
+				4122519527947A20001DC767 /* CarouselView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				4177ED32278510E500C08BA8 /* HomeView.swift in Sources */,
 				4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */,
+				4122519627947A20001DC767 /* CarouselView.swift in Sources */,
 				412251942793413E001DC767 /* ScrollingHStackModifier.swift in Sources */,
 				4177ED342785112800C08BA8 /* StandardResumeItemView.swift in Sources */,
 				41F601AB27891D2A00BE0239 /* LargeTopView.swift in Sources */,
@@ -376,6 +382,7 @@
 				41F601B227891D4E00BE0239 /* WhiteButton.swift in Sources */,
 				4177ED352785112800C08BA8 /* StandardResumeItemView.swift in Sources */,
 				4177ED042783EC5000C08BA8 /* ResumeAppTests.swift in Sources */,
+				4122519727947A20001DC767 /* CarouselView.swift in Sources */,
 				4177ED3D278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				41F601AE27891D4300BE0239 /* SmallVerticalButton.swift in Sources */,
 			);
@@ -391,6 +398,7 @@
 				4177ED3A2785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
 				4177ED3E278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				4177ED102783EC5000C08BA8 /* ResumeAppUITestsLaunchTests.swift in Sources */,
+				4122519827947A20001DC767 /* CarouselView.swift in Sources */,
 				41F601AF27891D4300BE0239 /* SmallVerticalButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
