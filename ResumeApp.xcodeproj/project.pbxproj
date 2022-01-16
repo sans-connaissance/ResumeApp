@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		412251942793413E001DC767 /* ScrollingHStackModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412251932793413E001DC767 /* ScrollingHStackModifier.swift */; };
 		4177ECF32783EC4E00C08BA8 /* ResumeAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */; };
 		4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ECF42783EC4E00C08BA8 /* ContentView.swift */; };
 		4177ECF72783EC4F00C08BA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4177ECF62783EC4F00C08BA8 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		412251932793413E001DC767 /* ScrollingHStackModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollingHStackModifier.swift; sourceTree = "<group>"; };
 		4177ECEF2783EC4E00C08BA8 /* ResumeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResumeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4177ECF22783EC4E00C08BA8 /* ResumeAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeAppApp.swift; sourceTree = "<group>"; };
 		4177ECF42783EC4E00C08BA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				4177ED372785113F00C08BA8 /* GlobalHelpers.swift */,
+				412251932793413E001DC767 /* ScrollingHStackModifier.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */,
 				4177ED32278510E500C08BA8 /* HomeView.swift in Sources */,
 				4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */,
+				412251942793413E001DC767 /* ScrollingHStackModifier.swift in Sources */,
 				4177ED342785112800C08BA8 /* StandardResumeItemView.swift in Sources */,
 				41F601AB27891D2A00BE0239 /* LargeTopView.swift in Sources */,
 				4177ECF32783EC4E00C08BA8 /* ResumeAppApp.swift in Sources */,

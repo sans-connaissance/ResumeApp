@@ -23,6 +23,7 @@ struct ResumeItem: Identifiable {
     
     var projectName: String?
     
+    var overLay: String?
     var shortDescription: String?
     var LongDescription: String?
     

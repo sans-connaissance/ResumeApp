@@ -8,12 +8,55 @@
 import Foundation
 import SwiftUI
 
-let exampleResumeItem1 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Master's Degree", thumbnail: URL(string: "https://picsum.photos/200/300")!, categories: ["Education", "Experience", "Project"])
-let exampleResumeItem2 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Associate's Degree", thumbnail: URL(string: "https://picsum.photos/200/301")!,shortDescription: "HI THIS IS A DESCRIPTION", categories: ["Education", "Experience", "Project"] )
-let exampleResumeItem3 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Bacheloure Degree", thumbnail: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg/576px-University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg")!, categories: ["Education", "Experience", "Project"])
-let exampleResumeItem4 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Center for Academic Innovation", thumbnail: URL(string: "https://picsum.photos/200/303")!, categories: ["Education", "Experience", "Project"])
-let exampleResumeItem5 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Schawk, Inc", thumbnail: URL(string: "https://picsum.photos/200/304")!, categories: ["Education", "Experience", "Project"])
-let exampleResumeItem6 = ResumeItem(id: UUID().uuidString, year: 2011, name: "Campbell-Ewald", thumbnail: URL(string: "https://picsum.photos/200/305")!, categories: ["Education", "Experience", "Project"])
+let exampleResumeItem1 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Master's Degree",
+    thumbnail: URL(string: "https://picsum.photos/200/300")!,
+    overLay: "Download on App Store",
+    shortDescription: "Hi This is a short description",
+    categories: ["Education", "Experience", "Project"])
+
+let exampleResumeItem2 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Associate's Degree",
+    thumbnail: URL(string: "https://picsum.photos/200/301")!,
+    overLay: "Download on App Store",
+    shortDescription: "Hi This is a short description",
+    categories: ["Education", "Experience", "Project"] )
+
+let exampleResumeItem3 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Bacheloure Degree",
+    thumbnail: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg/576px-University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg")!,
+    overLay: "Download on App Store",
+    categories: ["Education", "Experience", "Project"])
+
+let exampleResumeItem4 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Center for Academic Innovation",
+    thumbnail: URL(string: "https://picsum.photos/200/303")!,
+    overLay: "Download on App Store",
+    categories: ["Education", "Experience", "Project"])
+
+let exampleResumeItem5 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Schawk, Inc",
+    thumbnail: URL(string: "https://picsum.photos/200/304")!,
+    overLay: "Download on App Store",
+    categories: ["Education", "Experience", "Project"])
+
+let exampleResumeItem6 = ResumeItem(
+    id: UUID().uuidString,
+    year: 2011,
+    name: "Campbell-Ewald",
+    thumbnail: URL(string: "https://picsum.photos/200/305")!,
+    overLay: "Download on App Store",
+    categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItems: [ResumeItem] = [exampleResumeItem1, exampleResumeItem2, exampleResumeItem3, exampleResumeItem4, exampleResumeItem5, exampleResumeItem6]
 
@@ -28,7 +71,7 @@ extension LinearGradient {
 struct SmallButton: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(width: 160, height: 80)
+            .frame(width: 150, height: 75)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
@@ -36,13 +79,25 @@ struct SmallButton: ViewModifier {
             .padding(.bottom, 20)
         
     }
-    
+}
+
+struct MediumButton: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 200, height: 100)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+            .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
+            .padding(.leading)
+        ///Adjust size of background gradient with modifiers here
+            .padding(.bottom, 20)
+        
+    }
 }
 
 struct LargeButton: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .frame(width: 200, height: 300)
+            .frame(width: 300, height: 300, alignment: .center)
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
@@ -50,7 +105,6 @@ struct LargeButton: ViewModifier {
             .padding(.bottom, 20)
         
     }
-    
 }
 
 
@@ -63,11 +117,6 @@ enum Category: String, CaseIterable {
     case experience
     case iOSTraining
     case projects
-
-//    /// update these in order to update button groups on home page and elsewhere
-//    static let smallButtonGroup: [Category] = [.demos, .dataStructures, iOSTraining]
-//    static let mediumButtonGroup: [Category] = [.appStore, .experience]
-//    static let largeButtonGroup: [Category] = [.education]
     
     var title: String {
         switch self {
