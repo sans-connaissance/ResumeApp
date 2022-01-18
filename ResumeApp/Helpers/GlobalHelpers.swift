@@ -10,51 +10,82 @@ import SwiftUI
 
 let exampleResumeItem1 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
+    startDate: "April 2011",
+    endDate: "May 2011",
     name: "Master's Degree",
     thumbnail: URL(string: "https://picsum.photos/200/300")!,
+    location: "Ann Arbor, MI", // could this be a real location and open on the map?
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
+    schoolName: "University of Michigan",
+    degreeName: "Master's of Information Science",
     overLay: "Download on App Store",
-    shortDescription: "Hi This is a short description",
+    shortDescription: "Master's of Information Science",
+    LongDescription: "Provide all kinds of services for the University and stuff like that",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem2 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
-    name: "Associate's Degree",
+    startDate: "April 2011",
+    endDate: "May 2009",
+    name: "Bachelours Degree",
     thumbnail: URL(string: "https://picsum.photos/200/301")!,
+    location: "Sterling Heights, MI", // could this be a real location and open on the map?
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
+    schoolName: "Siena Heights",
+    degreeName: "Bachelours Degree of Business Administration",
     overLay: "Download on App Store",
-    shortDescription: "Hi This is a short description",
-    categories: ["Education", "Experience", "Project"] )
+    shortDescription: "Business Administration & Marketing",
+    LongDescription: "Provide all kinds of services for the University and stuff like that",
+    categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem3 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
-    name: "Bacheloure Degree",
-    thumbnail: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg/576px-University_of_Michigan_August_2013_125_%28University_Health_Service%29.jpg")!,
+    startDate: "April 2011",
+    endDate: "June 2006",
+    name: "Associate's Degree",
+    thumbnail: URL(string: "https://picsum.photos/200/302")!,
+    location: "Macomb, MI", // could this be a real location and open on the map?
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
+    schoolName: "Macomb Community College",
+    degreeName: "Associates of Media and Communication Arts",
     overLay: "Download on App Store",
+    shortDescription: "with a focus on 3d animation",
+    LongDescription: "Provide all kinds of services for the University and stuff like that",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem4 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
+    startDate: "2011",
+    endDate: "June 2006",
     name: "Center for Academic Innovation",
     thumbnail: URL(string: "https://picsum.photos/200/303")!,
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
     overLay: "Download on App Store",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem5 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
+    startDate: "2011",
+    endDate: "June 2006",
     name: "Schawk, Inc",
     thumbnail: URL(string: "https://picsum.photos/200/304")!,
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
     overLay: "Download on App Store",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem6 = ResumeItem(
     id: UUID().uuidString,
-    year: 2011,
+    startDate: "2011",
+    endDate: "June 2006",
     name: "Campbell-Ewald",
     thumbnail: URL(string: "https://picsum.photos/200/305")!,
+    companyName: "Center for Academic Innovation",
+    jobTitle: "Operations Lead",
     overLay: "Download on App Store",
     categories: ["Education", "Experience", "Project"])
 
@@ -75,8 +106,8 @@ struct SmallButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        ///Adjust size of background gradient with modifiers here
-            .padding(.bottom, 20)
+        
+            
         
     }
 }
@@ -88,8 +119,8 @@ struct MediumButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        ///Adjust size of background gradient with modifiers here
-            .padding(.bottom, 20)
+        
+            
         
     }
 }
@@ -101,8 +132,6 @@ struct LargeButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        ///Adjust size of background gradient with modifiers here
-            .padding(.bottom, 20)
         
     }
 }
