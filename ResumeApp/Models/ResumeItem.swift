@@ -9,7 +9,8 @@ import Foundation
 
 struct ResumeItem: Identifiable {
     var id: String
-    var year: Int
+    var startDate: String
+    var endDate: String?
     var name: String
     var thumbnail: URL
     
@@ -18,9 +19,9 @@ struct ResumeItem: Identifiable {
     var companyName: String?
     var jobTitle: String?
     
-    var degreeName: String?
     var schoolName: String?
-    
+    var degreeName: String?
+
     var projectName: String?
     
     var overLay: String?
@@ -29,3 +30,6 @@ struct ResumeItem: Identifiable {
     
     var categories: [String]
 }
+
+
+//add optional projects to the model so that each resume item can have associated projects
