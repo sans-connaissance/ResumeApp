@@ -32,7 +32,7 @@ struct MediumResumeItemListWithOverlayView: View {
                                     .foregroundColor(.white)
                                     .font(.subheadline)
                                     .bold()
-                                    .padding(.top, 50)
+                                    .padding(.top, 75)
                                     .padding(.leading, 15)
                             }
                         }

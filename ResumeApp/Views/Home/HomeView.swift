@@ -15,7 +15,7 @@ struct HomeView: View {
     @State var heartFilled = false
     
     var body: some View {
-        ZStack {
+        VStack {
             // main VStack
             ScrollView(showsIndicators: false) {
                 // change this to VStack to remove skipping while running
@@ -27,9 +27,11 @@ struct HomeView: View {
                     MediumResumeItemListWithOverlayView(vm: vm, category: .appStore)
                     SmallResumeItemListView(vm: vm, category: .demos)
                     SmallResumeItemListView(vm: vm, category: .dataStructures)
+                    LargeResumeItemListView(vm: vm, category: .education)
+                    MediumResumeItemListWithDetailsView(vm: vm, category: .experience)
                     SmallResumeItemListView(vm: vm, category: .iOSTraining)
                     
-                    MediumResumeItemListWithDetailsView(vm: vm, category: .experience)
+                    
                 }
             }
         }

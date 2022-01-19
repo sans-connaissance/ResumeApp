@@ -17,7 +17,6 @@
 		412251AB2795DD7E001DC767 /* LargeResumeItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412251AA2795DD7E001DC767 /* LargeResumeItemListView.swift */; };
 		412251AC2795DD7E001DC767 /* LargeResumeItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412251AA2795DD7E001DC767 /* LargeResumeItemListView.swift */; };
 		412251AD2795DD7E001DC767 /* LargeResumeItemListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412251AA2795DD7E001DC767 /* LargeResumeItemListView.swift */; };
-		4124D54B2795F61900EDB8CA /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = 4124D54A2795F61900EDB8CA /* ACarousel */; };
 		4124D54D27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D54C27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift */; };
 		4124D54E27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D54C27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift */; };
 		4124D54F27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4124D54C27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift */; };
@@ -97,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4124D54B2795F61900EDB8CA /* ACarousel in Frameworks */,
 				4177ED212783EFA600C08BA8 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +260,6 @@
 			name = ResumeApp;
 			packageProductDependencies = (
 				4177ED202783EFA600C08BA8 /* Kingfisher */,
-				4124D54A2795F61900EDB8CA /* ACarousel */,
 			);
 			productName = ResumeApp;
 			productReference = 4177ECEF2783EC4E00C08BA8 /* ResumeApp.app */;
@@ -338,7 +335,6 @@
 			mainGroup = 4177ECE62783EC4E00C08BA8;
 			packageReferences = (
 				4177ED1F2783EFA600C08BA8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				4124D5492795F61900EDB8CA /* XCRemoteSwiftPackageReference "ACarousel" */,
 			);
 			productRefGroup = 4177ECF02783EC4E00C08BA8 /* Products */;
 			projectDirPath = "";
@@ -743,14 +739,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4124D5492795F61900EDB8CA /* XCRemoteSwiftPackageReference "ACarousel" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/JWAutumn/ACarousel";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.0;
-			};
-		};
 		4177ED1F2783EFA600C08BA8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -762,11 +750,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4124D54A2795F61900EDB8CA /* ACarousel */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4124D5492795F61900EDB8CA /* XCRemoteSwiftPackageReference "ACarousel" */;
-			productName = ACarousel;
-		};
 		4177ED202783EFA600C08BA8 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4177ED1F2783EFA600C08BA8 /* XCRemoteSwiftPackageReference "Kingfisher" */;

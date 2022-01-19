@@ -51,7 +51,7 @@ struct MediumResumeItemListWithDetailsView: View {
                                         .foregroundColor(.black)
                                         .font(.system(size: 10))
                                         //.bold()
-                                        .padding(.leading, 22)
+                                        .padding(.leading, 26)
                                     
                                 }
                             }

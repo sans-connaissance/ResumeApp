@@ -94,7 +94,7 @@ let exampleResumeItems: [ResumeItem] = [exampleResumeItem1, exampleResumeItem2, 
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
-        gradient: Gradient(colors: [Color.gray.opacity(0.05), Color.gray.opacity(0.15)]),
+        gradient: Gradient(colors: [Color.gray.opacity(0.01), Color.gray.opacity(0.15)]),
         startPoint: .top,
         endPoint: .bottom)
 }
@@ -106,8 +106,6 @@ struct SmallButton: ViewModifier {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .shadow(color: .gray, radius: 0.2, x: 0.2, y: 0.2)
             .padding(.leading)
-        
-            
         
     }
 }
