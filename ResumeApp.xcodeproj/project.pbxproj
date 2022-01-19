@@ -39,6 +39,8 @@
 		4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
 		4177ED3D278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
 		4177ED3E278511C100C08BA8 /* ResumeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4177ED3B278511C100C08BA8 /* ResumeItem.swift */; };
+		4183731627984F2D004BD51B /* ResumeItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183731527984F2D004BD51B /* ResumeItemDetailView.swift */; };
+		4183731827988735004BD51B /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4183731727988735004BD51B /* Project.swift */; };
 		41F601AB27891D2A00BE0239 /* LargeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F601AA27891D2A00BE0239 /* LargeTopView.swift */; };
 		41F601AD27891D4300BE0239 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F601AC27891D4300BE0239 /* SmallVerticalButton.swift */; };
 		41F601AE27891D4300BE0239 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F601AC27891D4300BE0239 /* SmallVerticalButton.swift */; };
@@ -86,6 +88,8 @@
 		4177ED332785112800C08BA8 /* ResumeItemImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItemImageView.swift; sourceTree = "<group>"; };
 		4177ED372785113F00C08BA8 /* GlobalHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalHelpers.swift; sourceTree = "<group>"; };
 		4177ED3B278511C100C08BA8 /* ResumeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItem.swift; sourceTree = "<group>"; };
+		4183731527984F2D004BD51B /* ResumeItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumeItemDetailView.swift; sourceTree = "<group>"; };
+		4183731727988735004BD51B /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		41F601AA27891D2A00BE0239 /* LargeTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTopView.swift; sourceTree = "<group>"; };
 		41F601AC27891D4300BE0239 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
 		41F601B027891D4E00BE0239 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 				412251A62795DD04001DC767 /* MediumResumeItemListWithOverlayView.swift */,
 				412251AA2795DD7E001DC767 /* LargeResumeItemListView.swift */,
 				4124D54C27960E9E00EDB8CA /* MediumResumeItemListWithDetailsView.swift */,
+				4183731427984F08004BD51B /* DetailViews */,
 			);
 			path = ResumeItemLists;
 			sourceTree = "<group>";
@@ -199,10 +204,19 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		4183731427984F08004BD51B /* DetailViews */ = {
+			isa = PBXGroup;
+			children = (
+				4183731527984F2D004BD51B /* ResumeItemDetailView.swift */,
+			);
+			path = DetailViews;
+			sourceTree = "<group>";
+		};
 		41DAC0EA278FBB1B003CA326 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				4177ED3B278511C100C08BA8 /* ResumeItem.swift */,
+				4183731727988735004BD51B /* Project.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -381,6 +395,7 @@
 				4177ED382785113F00C08BA8 /* GlobalHelpers.swift in Sources */,
 				4177ED30278510D500C08BA8 /* HomeVM.swift in Sources */,
 				4177ED3C278511C100C08BA8 /* ResumeItem.swift in Sources */,
+				4183731627984F2D004BD51B /* ResumeItemDetailView.swift in Sources */,
 				4177ED32278510E500C08BA8 /* HomeView.swift in Sources */,
 				4177ECF52783EC4E00C08BA8 /* ContentView.swift in Sources */,
 				412251942793413E001DC767 /* ScrollingHStackModifier.swift in Sources */,
@@ -391,6 +406,7 @@
 				41F601AB27891D2A00BE0239 /* LargeTopView.swift in Sources */,
 				4177ECF32783EC4E00C08BA8 /* ResumeAppApp.swift in Sources */,
 				41F601AD27891D4300BE0239 /* SmallVerticalButton.swift in Sources */,
+				4183731827988735004BD51B /* Project.swift in Sources */,
 				41F601B127891D4E00BE0239 /* WhiteButton.swift in Sources */,
 				412251AB2795DD7E001DC767 /* LargeResumeItemListView.swift in Sources */,
 			);

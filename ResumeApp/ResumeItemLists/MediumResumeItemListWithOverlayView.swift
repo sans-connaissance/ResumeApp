@@ -23,17 +23,22 @@ struct MediumResumeItemListWithOverlayView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                        ZStack {
-                            ResumeItemImageView(resumeItem: resumeItem)
-                                .modifier(MediumButton())
-                            
-                            if let overLay = resumeItem.overLay {
-                                Text(overLay)
-                                    .foregroundColor(.white)
-                                    .font(.subheadline)
-                                    .bold()
-                                    .padding(.top, 75)
-                                    .padding(.leading, 15)
+                        
+                        NavigationLink {
+                            ResumeItemDetailView(resumeItem: resumeItem)
+                        } label: {
+                            ZStack {
+                                ResumeItemImageView(resumeItem: resumeItem)
+                                    .modifier(MediumButton())
+                                
+                                if let overLay = resumeItem.overLay {
+                                    Text(overLay)
+                                        .foregroundColor(.white)
+                                        .font(.subheadline)
+                                        .bold()
+                                        .padding(.top, 75)
+                                        .padding(.leading, 15)
+                                }
                             }
                         }
                     }

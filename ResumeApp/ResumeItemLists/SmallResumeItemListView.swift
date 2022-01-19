@@ -23,9 +23,13 @@ struct SmallResumeItemListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(spacing: -6) {
                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                        VStack {
-                            ResumeItemImageView(resumeItem: resumeItem)
-                                .modifier(SmallButton())
+                        NavigationLink {
+                            ResumeItemDetailView(resumeItem: resumeItem)
+                        } label: {
+                            VStack {
+                                ResumeItemImageView(resumeItem: resumeItem)
+                                    .modifier(SmallButton())
+                            }
                         }
                     }
                 }

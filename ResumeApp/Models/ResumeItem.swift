@@ -28,6 +28,9 @@ struct ResumeItem: Identifiable {
     var shortDescription: String?
     var LongDescription: String?
     
+    var list: [String]?
+    var projects: [Project]?
+    
     var categories: [String]
 }
 

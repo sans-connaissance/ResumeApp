@@ -23,18 +23,20 @@ struct LargeResumeItemListView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .center, spacing: -6) {
                     ForEach(vm.getResumeItem(forCat: category)) { resumeItem in
-                        VStack {
-                            ResumeItemImageView(resumeItem: resumeItem)
-                                .modifier(LargeButton())
+                        
+                        NavigationLink {
+                            ResumeItemDetailView(resumeItem: resumeItem)
+                        } label: {
+                            VStack {
+                                ResumeItemImageView(resumeItem: resumeItem)
+                                    .modifier(LargeButton())
+                            }
                         }
                     }
                 }
             }
-            // Can I add a dependancy here so that the background can be changed?
-            ///Adjust size of background gradient with modifiers here
             .padding(.bottom)
             .background(LinearGradient.blackOpacityGradient)
-            // .modifier(ScrollingHStackModifier(items: 3, itemWidth: 300, itemSpacing: 30))
         }
     }
 }

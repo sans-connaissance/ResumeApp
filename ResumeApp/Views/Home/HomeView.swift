@@ -15,26 +15,32 @@ struct HomeView: View {
     @State var heartFilled = false
     
     var body: some View {
-        VStack {
-            // main VStack
-            ScrollView(showsIndicators: false) {
-                // change this to VStack to remove skipping while running
-                LazyVStack {
-                    LargeTopView(resumeItem: exampleResumeItem3)
-                        .frame(width: screen.width)
-                        .padding(.top, -110)
-                    
-                    MediumResumeItemListWithOverlayView(vm: vm, category: .appStore)
-                    SmallResumeItemListView(vm: vm, category: .demos)
-                    SmallResumeItemListView(vm: vm, category: .dataStructures)
-                    LargeResumeItemListView(vm: vm, category: .education)
-                    MediumResumeItemListWithDetailsView(vm: vm, category: .experience)
-                    SmallResumeItemListView(vm: vm, category: .iOSTraining)
-                    
-                    
+        
+        NavigationView {
+            VStack {
+                // main VStack
+                ScrollView(showsIndicators: false) {
+                    // change this to VStack to remove skipping while running
+                    LazyVStack {
+
+                        LargeTopView(resumeItem: exampleResumeItem3)
+                            .frame(width: screen.width)
+                            .padding(.top, -110)
+                        
+                        MediumResumeItemListWithOverlayView(vm: vm, category: .appStore)
+                        SmallResumeItemListView(vm: vm, category: .demos)
+                        SmallResumeItemListView(vm: vm, category: .dataStructures)
+                        LargeResumeItemListView(vm: vm, category: .education)
+                        MediumResumeItemListWithDetailsView(vm: vm, category: .experience)
+                        SmallResumeItemListView(vm: vm, category: .iOSTraining)
+                        
+                        
+                    }
                 }
             }
+            .navigationBarHidden(true)
         }
+
     }
 }
 
