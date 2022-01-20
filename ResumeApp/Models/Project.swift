@@ -9,10 +9,14 @@ import Foundation
 
 struct Project: Identifiable {
     var id: String
-    var thumbnails: [URL]
+    var name: String
+    var thumbnails: [URL]?
+    var videos: [URL]?
+    var link: URL?
     var shortDescription: String?
     var longDescription: String?
     var list: [String]?
+    var tags: [String]?
     
     
 }
