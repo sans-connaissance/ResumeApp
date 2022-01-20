@@ -21,7 +21,7 @@ let exampleResumeItem1 = ResumeItem(
     degreeName: "Master's of Information Science",
     overLay: "Download on App Store",
     shortDescription: "Master's of Information Science",
-    LongDescription: "Provide all kinds of services for the University and stuff like that",
+    longDescription: "Provide all kinds of services for the University and stuff like that",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem2 = ResumeItem(
@@ -37,7 +37,7 @@ let exampleResumeItem2 = ResumeItem(
     degreeName: "Bachelours Degree of Business Administration",
     overLay: "Download on App Store",
     shortDescription: "Business Administration & Marketing",
-    LongDescription: "Provide all kinds of services for the University and stuff like that",
+    longDescription: "Provide all kinds of services for the University and stuff like that",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem3 = ResumeItem(
@@ -53,7 +53,7 @@ let exampleResumeItem3 = ResumeItem(
     degreeName: "Associates of Media and Communication Arts",
     overLay: "Download on App Store",
     shortDescription: "with a focus on 3d animation",
-    LongDescription: "Provide all kinds of services for the University and stuff like that",
+    longDescription: "Provide all kinds of services for the University and stuff like that",
     categories: ["Education", "Experience", "Project"])
 
 let exampleResumeItem4 = ResumeItem(
