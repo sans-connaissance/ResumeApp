@@ -8,7 +8,20 @@
 import Foundation
 import SwiftUI
 
-
+func addDateString(month: Int, year: Int) -> String {
+    var components = DateComponents()
+    let dateFormatter = DateFormatter()
+    dateFormatter.setLocalizedDateFormatFromTemplate("MMM yyyy")
+    components.month = month
+    components.year = year
+    
+    if let date = Calendar.current.date(from: components) {
+        let formattedDate = dateFormatter.string(from: date)
+        return formattedDate
+    }
+    
+    return "error"
+}
 /// Interesting thing about programming is all the different things you get to research and learn in order to optimize digital or to describe in data and code.
 /// I hope that my experience shows I'm ready to apply all this experience and knowledge to writing better, descriptive, useful code for people that need things done.
 let davidMalicke = Resume(
@@ -71,7 +84,7 @@ let skills = [iosDev, operations, digitalPublishing, intellectualProperty]
 
 let foundationalSkill = Resume.Skill(
     id: UUID().uuidString,
-    keywords: ["Growth Mindset", "Learner", "Curious", "Critical", "Emotional Intelligence"],
+    keywords: ["Growth Mindset", "Learner", "Curious", "Critical", "Committement", "Emotional Intelligence"],
     name: "Foundational Skills",
     level: "Junior")
 
@@ -118,6 +131,24 @@ let frankfurtIndustries = Resume.Work(
     highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
     url: nil,
     thumbnail: URL(string: "https://frankfurtindustries.neocities.org/images/bg.jpg")!)
+
+///PROJECTS
+
+
+let umSalaryPub = Resume.Project(
+    id: UUID().uuidString,
+    name: "UM SalaryPub",
+    startDate: "Dec 2020",
+    endDate: "Mar 2021",
+    roles: <#T##[String]?#>,
+    description: <#T##String?#>,
+    keywords: <#T##[String]?#>,
+    type: <#T##String?#>,
+    entity: <#T##String?#>,
+    url: <#T##URL?#>,
+    highlights: <#T##[String]?#>,
+    thumbnails: <#T##[URL]?#>,
+    videos: <#T##[Resume.Video]?#>)
 
 
 

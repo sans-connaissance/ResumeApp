@@ -113,11 +113,12 @@ struct Resume: Codable, Identifiable {
     let languages: [Language]?
 
     struct Project: Codable, Identifiable {
+
         let id: String?
         let name: String?
-        let startDate: String?
-        let roles: [String]?
+        var startDate: String?
         let endDate: String?
+        let roles: [String]?
         let description: String?
         let keywords: [String]?
         let type: String?
@@ -187,4 +188,5 @@ struct Resume: Codable, Identifiable {
     }
 
     let videos: [Video]?
+    
 }
