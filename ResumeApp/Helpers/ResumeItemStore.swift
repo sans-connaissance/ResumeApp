@@ -9,14 +9,16 @@ import Foundation
 import SwiftUI
 
 
+/// Interesting thing about programming is all the different things you get to research and learn in order to optimize digital or to describe in data and code.
+/// I hope that my experience shows I'm ready to apply all this experience and knowledge to writing better, descriptive, useful code for people that need things done.
 let davidMalicke = Resume(
     id: UUID().uuidString,
     basics: resumeBasics,
     volunteer: nil,
     publications: [medAndSciencePub],
-    skills: <#T##[Resume.Skill]?#>,
-    references: <#T##[Resume.Reference]?#>,
-    work: <#T##[Resume.Work]?#>,
+    skills: skills,
+    references: nil,
+    work: [frankfurtIndustries],
     languages: <#T##[Resume.Language]?#>,
     projects: <#T##[Resume.Project]?#>,
     awards: <#T##[Resume.Award]?#>,
@@ -44,6 +46,8 @@ let location = Resume.Basics.Location(
     region: "MI",
     countryCode: "USA")
 
+
+/// PROFILES
 let gitHub = Resume.Basics.Profile(
     id: UUID().uuidString,
     url: URL(string: "https://github.com/sans-connaissance"),
@@ -51,6 +55,7 @@ let gitHub = Resume.Basics.Profile(
     username: "sans-connaissance",
     thumbnail: URL(string: "https://cdn-icons-png.flaticon.com/512/25/25231.png"))
 
+/// PUBLICATIONS
 let medAndSciencePub = Resume.Publication(
         id: UUID().uuidString,
         summary: "Chapter 2: Open Access Journal Publishing",
@@ -60,12 +65,59 @@ let medAndSciencePub = Resume.Publication(
         releaseDate: "Nov, 10 2017",
         thumbnail: URL(string: "https://secure-ecsd.elsevier.com/covers/80/Tango2/large/9780128099698.jpg"))
 
+
+///SKILLS
+let skills = [iosDev, operations, digitalPublishing, intellectualProperty]
+
+let foundationalSkill = Resume.Skill(
+    id: UUID().uuidString,
+    keywords: ["Growth Mindset", "Learner", "Curious", "Critical", "Emotional Intelligence"],
+    name: "Foundational Skills",
+    level: "Junior")
+
 let iosDev = Resume.Skill(
     id: UUID().uuidString,
     keywords: ["Agile", "CoreData", "GIT", "MVVM", "Vapor", "StackOverflow", "Swift",  "SwiftUI", "XCode"],
     name: "iOS Developer Skills",
     level: "Junior")
 
+let operations = Resume.Skill(
+    id: UUID().uuidString,
+    keywords: ["Project Management", "Change Management", "Continuous Improvement", "Business Analysis", "Process Analysis", "Communication"],
+    name: "Operations Lead Skill",
+    level: "Seasoned Professional")
+
+let digitalPublishing = Resume.Skill(
+    id: UUID().uuidString,
+    keywords: ["Editing", "Publishing", "Content Management Systems", "Drupal", "WordPress", "Wiki", "Meta Data", "Self-Publishing", "Guidelines", "Publishing Contracts", "Licensing"],
+    name: "Digital Publishing Skill",
+    level: "Seasoned Professional")
+
+let intellectualProperty = Resume.Skill(
+    id: UUID().uuidString,
+    keywords: ["Copyright", "Fair Use", "Creative Commons Licensing", "Clearance", "WordPress", "Wiki", "Trademark"],
+    name: "Intellectual Property Skill",
+    level: "Professional")
+
+let business = Resume.Skill(
+    id: UUID().uuidString,
+    keywords: ["Accounting", "Memorandum of Understanding", "", "Clearance", "WordPress", "Wiki", "Trademark"],
+    name: "Business Skill",
+    level: "Professional")
+
+
+///WORK
+let frankfurtIndustries = Resume.Work(
+    id: UUID().uuidString,
+    summary: "Design, develop, and publish iOS apps for Frankfurt Industries, LLC.",
+    name: "Frankfurt Industries",
+    department: "Mobile Development",
+    position: "iOS Mobile Developer",
+    startDate: "February 2021",
+    endDate: "Present",
+    highlights: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
+    url: nil,
+    thumbnail: URL(string: "https://frankfurtindustries.neocities.org/images/bg.jpg")!)
 
 
 
