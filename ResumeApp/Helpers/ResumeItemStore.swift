@@ -32,13 +32,13 @@ let davidMalicke = Resume(
     skills: skills,
     references: nil,
     work: [frankfurtIndustries],
-    languages: <#T##[Resume.Language]?#>,
-    projects: <#T##[Resume.Project]?#>,
-    awards: <#T##[Resume.Award]?#>,
-    certificates: <#T##[Resume.Certificate]?#>,
-    education: <#T##[Resume.Education]?#>,
-    interests: <#T##[Resume.Interest]?#>,
-    videos: <#T##[Resume.Video]?#>)
+    languages: languages,
+    projects: [umSalaryPub],
+    awards: nil,
+    certificates: certificates,
+    education: degrees,
+    interests: nil,
+    videos: nil)
 
 
 let resumeBasics = Resume.Basics(
@@ -75,7 +75,7 @@ let medAndSciencePub = Resume.Publication(
         name: "Medical and Scientific Publishing: Author, Editor, and Reviewer Perspectives",
         publisher: "Elsevier",
         url: URL(string: "https://www.elsevier.com/books/medical-and-scientific-publishing/markovac/978-0-12-809969-8"),
-        releaseDate: "Nov, 10 2017",
+        releaseDate: "2017-11-10",
         thumbnail: URL(string: "https://secure-ecsd.elsevier.com/covers/80/Tango2/large/9780128099698.jpg"))
 
 
@@ -133,77 +133,120 @@ let frankfurtIndustries = Resume.Work(
     thumbnail: URL(string: "https://frankfurtindustries.neocities.org/images/bg.jpg")!)
 
 ///PROJECTS
-
-
 let umSalaryPub = Resume.Project(
     id: UUID().uuidString,
     name: "UM SalaryPub",
-    startDate: "Dec 2020",
-    endDate: "Mar 2021",
-    roles: <#T##[String]?#>,
-    description: <#T##String?#>,
-    keywords: <#T##[String]?#>,
-    type: <#T##String?#>,
-    entity: <#T##String?#>,
-    url: <#T##URL?#>,
-    highlights: <#T##[String]?#>,
-    thumbnails: <#T##[URL]?#>,
-    videos: <#T##[Resume.Video]?#>)
+    startDate: "2020-11-01",
+    endDate: "2021-04-01",
+    roles: ["Lead iOS Developer", "UX Designer", "Publisher"],
+    description: "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.",
+    keywords: ["iOS, SwiftUI, CoreData, UIKit"],
+    type: "App",
+    entity: "Frankfurt Industries",
+    url: URL(string: "https://apps.apple.com/us/app/um-salarypub/id1564602975"),
+    highlights: ["List of a bunch of things about the project", "Another list of things"],
+    thumbnails: nil,
+    videos: nil)
+
+///LANGUAGES
+let languages = [english, french]
+
+let english = Resume.Language(
+    id: UUID().uuidString,
+    fluency: "Native",
+    language: "English")
+
+let french = Resume.Language(
+    id: UUID().uuidString,
+    fluency: "B1",
+    language: "French")
+
+///CERTIFICATES
+let certificates = [coreDataCert, leBienLeJusteCert]
+
+let coreDataCert = Resume.Certificate(
+    id: UUID().uuidString,
+    name: "Core Data in iOS",
+    issuer: "udemy",
+    date: "2022-01-01",
+    url: URL(string: "https://www.udemy.com/certificate/UC-c0dd6fe0-1aa5-4e2d-90a9-466f5d1d729f/"),
+    thumbnail: nil)
+
+let leBienLeJusteCert = Resume.Certificate(
+    id: UUID().uuidString,
+    name: "Le Bien, le Juste, l'Utile. Introduction aux éthiques philosophiques",
+    issuer: "Université de Genève",
+    date: "2020-02-23",
+    url: URL(string: "https://www.coursera.org/account/accomplishments/verify/A75THDC4VZ74"),
+    thumbnail: nil)
+
+///EDUCATION
+let degrees = [masterDegree, bachelorDegree, associateDegree]
+let masterDegree = Resume.Education(
+    id: UUID().uuidString,
+    institution: "University of Michigan",
+    schoolName: "School of Information",
+    degreeName: "Master of Science in Information",
+    specialization: "Archives and Records Management",
+    studyType: "formal",
+    startDate: "2009-01-03",
+    score: "3.8",
+    endDate: "2011-04-15",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+              "SI 502: Networked Computing: Storage, Communication, and Processing",
+              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+              "SI 543: Introductory Programming",
+              "SI 572: Database Application Design",
+              "SI 622: Needs Assessment and Usability Evaluation",
+              "SI 631: Content Management Systems"],
+    area: "Ann Arbor, MI",
+    url: nil,
+    image: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg/640px-Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg")!)
+
+let bachelorDegree = Resume.Education(
+    id: UUID().uuidString,
+    institution: "Siena Heights University",
+    schoolName: nil,
+    degreeName: "Bachelor of Business Administration",
+    specialization: "Marketing",
+    studyType: "formal",
+    startDate: nil,
+    score: "3.8",
+    endDate: "2007-12-15",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+              "SI 502: Networked Computing: Storage, Communication, and Processing",
+              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+              "SI 543: Introductory Programming",
+              "SI 572: Database Application Design",
+              "SI 622: Needs Assessment and Usability Evaluation",
+              "SI 631: Content Management Systems"],
+    area: "Adrian, MI",
+    url: nil,
+    image: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/Siena_Heights_University_Campus.JPG/640px-Siena_Heights_University_Campus.JPG")!)
+
+let associateDegree = Resume.Education(
+    id: UUID().uuidString,
+    institution: "Macomb Community College",
+    schoolName: nil,
+    degreeName: "Associate of Media and Communications Arts",
+    specialization: "Digital Art and Animation",
+    studyType: "formal",
+    startDate: nil,
+    score: "3.8",
+    endDate: "2004-12-15",
+    courses: ["SI 501: Contextual Inquiry and Consulting Foundations",
+              "SI 502: Networked Computing: Storage, Communication, and Processing",
+              "SI 510: Data Security and Privacy: Legal, Policy and Enterprise Issues",
+              "SI 543: Introductory Programming",
+              "SI 572: Database Application Design",
+              "SI 622: Needs Assessment and Usability Evaluation",
+              "SI 631: Content Management Systems"],
+    area: "Adrian, MI",
+    url: nil,
+    image: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/MacombcommunitycollegeMIUSA.jpg/640px-MacombcommunitycollegeMIUSA.jpg")!)
 
 
 
-//
-//let frankfurtIndustries = ResumeItem(
-//    name: "Frankfurt Industries",
-//    startDate: "February 2021",
-//    endDate: "Present",
-//    location: "Ann Arbor, MI",
-//    job: iosDev,
-//    school: nil,
-//    video: nil,
-//    thumbnail: URL(string: "https://frankfurtindustries.neocities.org/images/bg.jpg")!,
-//    overLay: nil,
-//    shortDescription: "Lead iOS software development at Frankfurt Industries.",
-//    longDescription: nil,
-//    list: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
-//    categories: ["iOS, SwiftUI, CoreData"],
-//    projects: [umSalaryPub])
-//
-//let iosDev = Job(
-//    employerName: "Frankfurt Industries",
-//    departmentName: nil,
-//    jobTitle: "iOS Software Developer")
-//
-//let umSalaryPub = Project(
-//    name: "UM SalaryPub",
-//    thumbnails: nil,
-//    videos: nil,
-//    link: nil,
-//    shortDescription: "An app for searching and comparing salaries",
-//    longDescription: "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.",
-//    list: ["List of a bunch of things about the project", "Another list of things"],
-//    tags: ["iOS, SwiftUI, CoreData, UIKit"])
-//
-//
-//let frankfurtIndustries1 = ResumeItem(
-//    id: UUID().uuidString,
-//    startDate: "February 2021",
-//    endDate: "Present",
-//    name: "Frankfurt Industries",
-//    thumbnail: URL(string: "https://frankfurtindustries.neocities.org/images/bg.jpg")!,
-//    location: "Ann Arbor, MI",
-//    companyName: "Frankfurt Industries",
-//    departmentName: nil,
-//    jobTitle: "iOS Software Developer",
-//    schoolName: nil,
-//    degreeName: nil,
-//    overLay: nil,
-//    shortDescription: "Lead iOS software development at Frankfurt Industries.",
-//    longDescription: nil,
-//    list: ["Design, develop and publish UM SalaryPub on the App Store.", "UM SalaryPub is a native iOS app for searching, reviewing and comparing over 470,000 unique salary records.", "Built UM SalaryPub with SwiftUI following MVVM, and designed the CoreData model from the ground up. UM SalaryPub also takes advantage of an imported UIKit Charts package, which combined with SwiftUI and CoreData delivers a fast and responsive user experience."],
-//    projects: [umSalaryPub],
-//    categories: ["iOS, SwiftUI, CoreData"])
-//
 //let operationsLead = ResumeItem(
 //    id: UUID().uuidString,
 //    startDate: "January 2017",
@@ -242,28 +285,7 @@ let umSalaryPub = Resume.Project(
 //    projects: [dataScienceEthics],
 //    categories: ["Coursera", "Edx"])
 //
-//let masterDegree = ResumeItem(
-//    id: UUID().uuidString,
-//    startDate: nil,
-//    endDate: "April 2011",
-//    name: "Master of Science in Information",
-//    thumbnail: URL(string: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg/640px-Horace_H._Rackham_School_of_Graduate_Studies_%28March_2008%29.jpg")!,
-//    location: "Ann Arbor, MI",
-//    companyName: nil,
-//    departmentName: nil,
-//    jobTitle: nil,
-//    schoolName: "University of Michigan",
-//    //department
-//    degreeName: "Master of Science in Information",
-//    //specialization
-//    overLay: nil,
-//    //GPA
-//    shortDescription: nil,
-//    longDescription: nil,
-//    list: ["Initiated into the Honor Society of Phi Kappa Phi. Membership is by invitation only to the top 10 percent of graduate students at a university"],
-//    projects: nil,
-//    categories: ["education"])
-//
+
 //let pythonForEverybody = Project(
 //    id: UUID().uuidString,
 //    name: "Python for Everybody Course series",
